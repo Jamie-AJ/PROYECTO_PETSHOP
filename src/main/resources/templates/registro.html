@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<head> 
+    <title>Getting Started: Serving Web Content</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <div class="container">
+    	<h1>Registro de Cliente de Pet Shop</h1>
+    	<form action="/usuario/grabar" method="post" th:object="${usuario}">
+		    <div class="form-group">
+		      <label for="inputNombre">Nombre</label>
+		      <input type="text" th:field="*{nom_usu}" class="form-control" id="inputEmail4" placeholder="Ingrese su Nombre">
+		    </div>
+ 		  <div class="form-group">
+		      <label for="inputApellido">Apellido</label>
+		      <input type="text" th:field="*{apel_usu}" class="form-control" id="inputPassword4" placeholder="Ingrese su Apellido">
+		  </div>
+		  <div class="form-row">
+		  	  <div class="form-group col-md-6">
+			    <label for="inputCorreo">Usuario</label>
+			    <input type="email" th:field="*{usuario}" class="form-control" id="inputAddress" placeholder="Ingrese su email">
+			  </div>
+			  <div class="form-group col-md-6">
+			    <label for="inputClave">Clave</label>
+			    <input type="password" th:field="*{contraseña}" class="form-control" id="inputAddress2" placeholder="Ingrese su Clave">
+			  </div>
+			  <div class="form-group col-md-6">
+			    <label for="inputFecNac">Telefono</label>
+			    <input type="number" th:field="*{telefono}" class="form-control" id="inputAddress2" placeholder="Ingrese su telefono">
+			  </div>
+			  <div class="form-group col-md-6">
+			    <label for="inputFecNac">DNI</label>
+			    <input type="number" th:field="*{dni_usu}" class="form-control" id="inputAddress2" placeholder="Ingrese su numero de DNI">
+			  </div>
+		  </div>
+		  
+		  <button type="submit" class="btn btn-primary">Registrar</button>
+		  <br>
+		  <p>Si tiene una cuenta, Ingrese <a href="/login/cargar">Aqui</a></p>
+		</form>	 
+		<br>
+		<div th:text="${mensaje}"></div>	 
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</html>

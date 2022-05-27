@@ -8,6 +8,6 @@ import com.pet.model.Usuario;
 @Repository
 public interface IUsuarioRepository extends JpaRepository<Usuario, String> {
 	
-	Usuario findByusuarioandcontraseña(String usuario, String contraseña);
+	Usuario findByUsuarioAndContraseña(String usuario, String contraseña);
 
 }

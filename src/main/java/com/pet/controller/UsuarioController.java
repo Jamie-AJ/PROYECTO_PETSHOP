@@ -28,7 +28,7 @@ public class UsuarioController {
 	public String validarLogin(@ModelAttribute Usuario usuario, Model model ) {	
 		System.out.println("Enviado " + usuario);
 		
-		Usuario u = repoU.findByusuarioandcontraseña(usuario.getUsuario(), usuario.getContraseña());
+		Usuario u = repoU.findByUsuarioAndContraseña(usuario.getUsuario(), usuario.getContraseña());
 		System.out.println(u);
 		
 		if(u==null) {
@@ -52,7 +52,8 @@ public class UsuarioController {
 		System.out.println("Enviado " + usuario);
 		
 		try {
-			usuario.setCod_tipo("cliente");
+			usuario.setCod_usu(usuario.getNom_usu().substring(0,2)+usuario.getApel_usu().substring(0, 2)+usuario.getDni_usu());
+			usuario.setCod_tipo("cli");
 			repoU.save(usuario);			
 			model.addAttribute("mensaje", "Usuario Registrado");
 			
