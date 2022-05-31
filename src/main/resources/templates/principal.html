@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:fragment="head">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>principal</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+
+<body>
+	<div id="contenedor" class="container">
+		<header th:fragment="header">
+			
+			<H2 align="center">Bienvenido: <strong th:text="${usuario.nom_usu}"></strong></h2>
+		</header>
+
+		<main>
+			<nav style="width: 10%;float: left;"  th:fragment="nav">
+				<ul  class="nav content-center">
+					<li class="nav-item"><a href="#" class="nav-link">Inicio</a></li>
+					<li class="nav-item"><a href="#" class="nav-link">Productos</a></li>
+					<li class="nav-item"><a href="#" class="nav-link">Catalogo</a></li>
+					<li class="nav-item"><a href="#" class="nav-link">Carrito</a></li>
+					<li class="nav-item"><a href="#" class="nav-link">Perfil</a></li>
+					<li class="nav-item"><a href="#" class="nav-link">Cerrar Sesion</a></li>
+				</ul>
+			</nav>
+			<section style="width: 65%;float: left;">
+			</section>
+		</main>
+		<footer th:fragment="footer">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		</footer>
+	</div>
+
+</body>
+
+</html>
